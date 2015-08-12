@@ -1,0 +1,20 @@
+{
+  "name": "lilquizzer",
+  "version": "0.0.0",
+  "authors": [
+    "Josh Phillips <jephillips@cohesionforce.com>"
+  ],
+  "description": "Quiz app for jstogether",
+  "main": "server.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.13.3"
+  }
+}
