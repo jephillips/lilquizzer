@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-<body>
+<body ng-app ="app" ng-controller="AppCtrl as AppCtrl">
 
+    Testing {{AppCtrl.name}}
+
+    <div ui-view></div>
 
     <!-- Third Party Dependencies-->
-    <script src="bower_components/react/react.js"></script>
-    <script src="bower_components/react/JSXTransformer.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/ui-router/release/angular-ui-router.js"></script>
 
     <!-- Client Dependencies-->
     <script src="app.js"></script>
+    <script src="components/home/home.js"></script>
 </body>
 </html>
