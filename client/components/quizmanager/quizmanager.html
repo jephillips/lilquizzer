@@ -1,0 +1,13 @@
+<div ng-controller="QuizManagerController as managerCtrl">
+
+    <link rel="stylesheet" href="/components/quizmanager/quizmanager.css" type="text/css" property="stylesheet">
+    <md-card id="quiz-manager">
+        <md-card-content>
+            <h1 class="text-center">Quizzes</h1>
+
+            <div ng-repeat="quiz in managerCtrl.quizzes">
+                <md-button class="md-raised quiz-title"> {{quiz.title}}</md-button>
+            </div>
+        </md-card-content>
+    </md-card>
+</div>

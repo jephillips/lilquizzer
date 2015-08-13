@@ -1,0 +1,24 @@
+#quiz-manager {
+    background-color: #036B69;
+
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    bottom: 25%;
+    left: 25%;
+
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.quiz-title {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10px;
+    width: 50%;
+    font-size: 16px;
+    text-align: center;
+}

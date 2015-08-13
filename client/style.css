@@ -1,0 +1,16 @@
+body {
+    height: 100%;
+    background-color: #033C78 !important;
+    color: whitesmoke !important;
+    font-family: lobster, serif !important;
+}
+
+#logo {
+    margin-right: 35%;
+    margin-left: 35%;
+    margin-top: 5%;
+    width: 30%;
+
+}
+
+
