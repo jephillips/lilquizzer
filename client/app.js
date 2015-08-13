@@ -19,11 +19,11 @@ angular.module('app', [
             })
             .state('home.start', {
                 url: '/start',
-                templateUrl: "components/quizmanager/start.html"
+                templateUrl: "components/quizmanager/views/start.html"
             })
             .state('home.quizlist', {
                 url: '/quizlist',
-                templateUrl: "components/quizmanager/quizlist.html"
+                templateUrl: "components/quizmanager/views/quizlist.html"
             });
 
         $urlRouterProvider.otherwise("/home/start");
