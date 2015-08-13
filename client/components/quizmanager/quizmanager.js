@@ -11,11 +11,4 @@ var QuizManagerController = function(){
 };
 
 angular.module('app.quizmanager', [])
-    .controller('QuizManagerController', QuizManagerController)
-    .directive('quizManager', function(){
-        return {
-            controller: QuizManagerController,
-            replace: true,
-            templateUrl: ''
-        }
-    });
+    .controller('QuizManagerController', QuizManagerController);

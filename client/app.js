@@ -16,8 +16,17 @@ angular.module('app', [
             .state("home", {
                 url: "/home",
                 templateUrl: "components/quizmanager/quizmanager.html"
+            })
+            .state('home.start', {
+                url: '/start',
+                templateUrl: "components/quizmanager/start.html"
+            })
+            .state('home.quizlist', {
+                url: '/quizlist',
+                templateUrl: "components/quizmanager/quizlist.html"
             });
-        $urlRouterProvider.otherwise("/home");
+
+        $urlRouterProvider.otherwise("/home/start");
 
         $mdThemingProvider.theme('default')
     });
