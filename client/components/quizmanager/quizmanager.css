@@ -4,8 +4,9 @@
     position: absolute;
     top: 25%;
     right: 25%;
-    bottom: 25%;
+    bottom: 10%;
     left: 25%;
+    overflow: auto;
 
     border-radius: 15px;
 }
