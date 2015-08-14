@@ -9,6 +9,7 @@ var AppCtrl = function () {
 angular.module('app', [
     'ui.router',
     'app.quizmanager',
+    'app.quizzer',
     'ngMaterial'])
     .controller('AppCtrl', AppCtrl)
     .config(function ($stateProvider, $urlRouterProvider, $mdThemingProvider) {
@@ -24,7 +25,12 @@ angular.module('app', [
             .state('home.quizlist', {
                 url: '/quizlist',
                 templateUrl: "components/quizmanager/views/quizlist.html"
+            })
+            .state('home.quizzer', {
+                url: '/quizzer',
+                templateUrl: "components/quizzer/quizzer.html"
             });
+
 
         $urlRouterProvider.otherwise("/home/start");
 
