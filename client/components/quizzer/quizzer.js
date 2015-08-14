@@ -11,6 +11,8 @@ var QuizzerController = function(quizService){
     quizCtrl.quiz = quizService.getCurrentQuiz();
 };
 
-angular.module('app.quizzer', ['app.quizservice'
+angular.module('app.quizzer', [
+    'app.quizservice',
+    'ngMaterial'
 ])
     .controller('QuizzerController', QuizzerController);

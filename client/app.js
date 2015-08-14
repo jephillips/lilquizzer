@@ -16,6 +16,7 @@ angular.module('app', [
         $stateProvider
             .state("home", {
                 url: "/home",
+                abstract:true,
                 templateUrl: "components/quizmanager/quizmanager.html"
             })
             .state('home.start', {
