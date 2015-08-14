@@ -25,7 +25,7 @@ var QuizManagerController = function(quizService){
                 ]}
         ]};
 
-    managerCtrl.quizzes = [{title: "Quiz 1"}, {title: "Quiz 2"}, {title: "Quiz 3"}];
+    managerCtrl.quizzes = [ managerCtrl.mockQuiz , {title: "Mock Quiz 2 (no Q's)"}, {title: "Mock Quiz 3 (no Q's)"}];
 
 };
 
