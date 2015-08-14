@@ -9,23 +9,7 @@ angular.module('app.quizservice', [])
 
         //not final implementation by any means
 
-        quizService.currentQuiz = {
-            title: "Mock Quiz",
-            questions:[
-                {question:'What color is the most presedential toupee?',
-                 options: [
-                     {option: "Red", correct: false},
-                     {option: "Blonde", correct: true},
-                     {option: 'Brown', correct: false}
-
-                     ]},
-                {question:'What color is the sky?',
-                 options: [
-                     {option: 'Red', correct: false},
-                     {option: 'Blue', correct: true},
-                     {option: 'Brown', correct:false}
-                 ]}
-            ]};
+        quizService.currentQuiz = {}
 
         quizService.setCurrentQuiz = function(quiz){
             quizService.currentQuiz = quiz;
