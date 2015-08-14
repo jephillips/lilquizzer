@@ -3,12 +3,14 @@
  */
 
 
-var QuizzerController = function(){
+var QuizzerController = function(quizService){
 
     var quizCtrl = this;
+    quizCtrl.quizService = quizService;
 
-    this.quiz = [];
+    quizCtrl.quiz = quizService.getCurrentQuiz();
 };
 
-angular.module('app.quizzer', [])
+angular.module('app.quizzer', ['app.quizservice'
+])
     .controller('QuizzerController', QuizzerController);

@@ -1,0 +1,11 @@
+<div ng-controller="QuizzerController as quizCtrl">
+    <h1 class="center-block">{{quizCtrl.quiz.title}}</h1>
+    <div ng-repeat="question in quizCtrl.quiz.questions">
+        <div class="center-block">{{question.question}} </div>
+        <md-radio-group ng-repeat="option in question.options">
+            <md-radio-button class="center">{{option.option}}</md-radio-group>
+        </div>
+        <br>
+    </div>
+    <md-button ui-sref="home.quizlist" class="centered-button">Submit</md-button>
+</div>
