@@ -21,6 +21,22 @@ angular.module('app.quizservice', [])
             console.log(quizService.currentQuiz);
             return quizService.currentQuiz;
 
+        };
+
+        quizService.setCurrentScore = function(score) {
+            quizService.currentScore = score;
+        };
+
+        quizService.setQuestionCount = function(qCount) {
+            quizService.questionCount = qCount;
+        };
+
+        quizService.getQuestionCount = function(){
+            return quizService.questionCount;
+        };
+
+        quizService.getCurrentScore = function(){
+            return quizService.currentScore;
         }
 
 

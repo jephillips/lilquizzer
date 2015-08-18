@@ -2,11 +2,11 @@
     <h1 class="center-block">{{quizCtrl.quiz.title}}</h1>
     <div ng-repeat="question in quizCtrl.quiz.questions">
         <div class="center-block">{{question.question}} </div>
-        {{question.guess}}
+
         <md-radio-group ng-repeat="option in question.options" ng-model="question.guess">
             <md-radio-button ng-value="option.option" class="center">{{option.option}}</md-radio-button>
         </md-radio-group>
         </div>
         <br>
-    <md-button ng-click="quizCtrl.submit()"  class="centered-button">Submit</md-button>
+    <md-button ng-click="quizCtrl.submit()" ui-sref="home.score" class="centered-button">Submit</md-button>
 </div>

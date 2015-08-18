@@ -1,0 +1,9 @@
+<div ng-controller="ScoreController as scoreCtrl">
+    <style>
+        #score {
+            margin: 20%
+        }
+    </style>
+    <h1>Your answered {{scoreCtrl.currentScore}} out of {{scoreCtrl.questionCount}} correct!</h1>
+    <md-button class="centered-button" ui-sref="home.quizlist">Go Back To Quizzes</md-button>
+</div>
