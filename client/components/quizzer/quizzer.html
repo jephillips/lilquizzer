@@ -2,7 +2,6 @@
     <h1 class="center-block">{{quizCtrl.quiz.title}}</h1>
     <div ng-repeat="question in quizCtrl.quiz.questions">
         <div class="center-block">{{question.question}} </div>
-
         <md-radio-group ng-repeat="option in question.options" ng-model="question.guess">
             <md-radio-button ng-value="option.option" class="center">{{option.option}}</md-radio-button>
         </md-radio-group>

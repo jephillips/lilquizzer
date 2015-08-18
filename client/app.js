@@ -3,7 +3,7 @@
  */
 
 var AppCtrl = function () {
-    this.name = "AppCtrl"
+    // No need for this, but following convention
 };
 
 angular.module('app', [
@@ -13,7 +13,7 @@ angular.module('app', [
     'app.quizzer.score',
     'ngMaterial'])
     .controller('AppCtrl', AppCtrl)
-    .config(function ($stateProvider, $urlRouterProvider, $mdThemingProvider) {
+    .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state("home", {
                 url: "/home",
@@ -40,5 +40,4 @@ angular.module('app', [
 
         $urlRouterProvider.otherwise("/home/start");
 
-        $mdThemingProvider.theme('default')
     });

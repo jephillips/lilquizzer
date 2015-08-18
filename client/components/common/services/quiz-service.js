@@ -7,9 +7,7 @@ angular.module('app.quizservice', [])
     .service('quizService', function QuizService() {
         var quizService = this;
 
-        //not final implementation by any means
-
-        quizService.currentQuiz = {}
+        quizService.currentQuiz = {};
 
         quizService.setCurrentQuiz = function(quiz){
             quizService.currentQuiz = quiz;

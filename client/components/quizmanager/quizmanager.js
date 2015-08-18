@@ -13,9 +13,9 @@ var QuizManagerController = function (quizService) {
             {
                 question: 'What color is the most presedential toupee?',
                 options: [
-                    {option: "Red", correct: false},
-                    {option: "Blonde", correct: true},
-                    {option: 'Brown', correct: false}
+                    {option: "Red"},
+                    {option: "Blonde"},
+                    {option: 'Brown'}
                 ],
                 answer: 'Blonde'
             },
