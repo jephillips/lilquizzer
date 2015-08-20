@@ -7,7 +7,11 @@ var QuizManagerController = function (quizService) {
     var managerCtrl = this;
     managerCtrl.quizService = quizService;
 
-    managerCtrl.quizzes = quizService.getQuizList();
+    quizService.getQuizList()
+        .then(function(result){
+            managerCtrl.quizzes = result.data;
+            console.log(managerCtrl.quizzes)
+        })
 
 };
 
