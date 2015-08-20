@@ -9,7 +9,7 @@ var QuizManagerController = function (quizService) {
 
     quizService.getQuizList()
         .then(function(result){
-            managerCtrl.quizzes = result.data;
+            managerCtrl.quizzes = result;
             console.log(managerCtrl.quizzes)
         })
 
