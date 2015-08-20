@@ -4,21 +4,21 @@
 
 
 angular.module('app.quizservice', [])
-    .service('quizService', function QuizService($http) {
+    .service('quizService', function QuizService($http, $q) {
         var quizService = this,
+            quizzes,
             URLS = {
               FETCH: 'quizzes.json'
             };
 
+        quizService.quizzes = [];
         quizService.currentQuiz = {};
 
         quizService.setCurrentQuiz = function(quiz){
             quizService.currentQuiz = quiz;
-            console.log("Quiz set");
         };
 
         quizService.getCurrentQuiz = function(){
-            console.log("Quiz get");
             console.log(quizService.currentQuiz);
             return quizService.currentQuiz;
 
@@ -42,7 +42,7 @@ angular.module('app.quizservice', [])
 
 
         quizService.getQuizList = function(){
-            return $http.get(URLS.FETCH).then(cacheResults);
+            return (quizzes) ? $q.when(quizzes) : $http.get(URLS.FETCH).then(cacheResults);
         };
 
         function extractData(result){
@@ -50,7 +50,8 @@ angular.module('app.quizservice', [])
         }
 
         function cacheResults(result){
-            return extractData(result);
+            quizzes = extractData(result);
+            return quizzes;
         }
 
     });
