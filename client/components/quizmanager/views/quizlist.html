@@ -1,4 +1,4 @@
-<div ng-controller="QuizManagerController as managerCtrl">
+<div >
     <h1 class="text-center">Quizzes</h1>
     <div ng-repeat="quiz in managerCtrl.quizzes">
         <md-button ng-click="managerCtrl.quizService.setCurrentQuiz(quiz)" ui-sref="home.quizzer" class="md-raised centered-button"> {{quiz.title}}</md-button>
