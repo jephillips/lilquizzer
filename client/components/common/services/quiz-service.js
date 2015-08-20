@@ -7,7 +7,7 @@ angular.module('app.quizservice', [])
     .service('quizService', function QuizService($http) {
         var quizService = this,
             URLS = {
-              FETCH: 'data/quizzes.json'
+              FETCH: 'quizzes.json'
             };
 
         quizService.currentQuiz = {};
