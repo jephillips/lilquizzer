@@ -2,17 +2,12 @@
  * Created by Joshua on 8/11/2015.
  */
 
-var AppCtrl = function () {
-    // No need for this, but following convention
-};
-
 angular.module('app', [
     'ui.router',
     'app.quizmanager',
     'app.quizzer',
     'app.quizzer.score',
     'ngMaterial'])
-    .controller('AppCtrl', AppCtrl)
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state("home", {
@@ -26,15 +21,18 @@ angular.module('app', [
             })
             .state('home.quizlist', {
                 url: '/quizlist',
-                templateUrl: "components/quizmanager/views/quizlist.html"
+                templateUrl: "components/quizmanager/views/quizlist.html",
+                controller: "QuizManagerController as managerCtrl"
             })
             .state('home.quizzer', {
                 url: '/quizzer',
-                templateUrl: "components/quizzer/quizzer.html"
+                templateUrl: "components/quizzer/quizzer.html",
+                controller: "QuizzerController as quizCtrl"
             })
             .state('home.score', {
                 url: '/score',
-                templateUrl: 'components/quizzer/score/score.html'
+                templateUrl: 'components/quizzer/score/score.html',
+                controller: "ScoreController as scoreCtrl"
                 });
 
 
